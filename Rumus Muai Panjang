@@ -1,0 +1,46 @@
+def hitung_pemuaian_panjang(Lo, α, ΔT):
+    ΔL = Lo * α * ΔT
+    return ΔL
+
+def hitung_pemuaian_luas(Ao, β, ΔT):
+    ΔA = Ao * β * ΔT
+    return ΔA
+
+def hitung_pemuaian_volume(Vo, γ, ΔT):
+    ΔV = Vo * γ * ΔT
+    return ΔV
+
+def main():
+    print("Program untuk menghitung pemuaian dalam fisika")
+    print("1: hitung pemuaian panjang (ΔL)")
+    print("2: hitung pemuaian luas (ΔA)")
+    print("3: hitung pemuaian volume (ΔV)")
+
+    pilihan = input("Masukkan pilihan 1/2/3:")
+
+    if pilihan == "1":
+        Lo = float(input("Masukkan panjang awal dalam meter: "))
+        α = float(input("Masukkan koefisien muai panjang (/°C): "))
+        ΔT = float(input("Masukkan perubahan suhu (°C): "))
+        ΔL = hitung_pemuaian_panjang(Lo, α, ΔT)
+        print(f"Perubahan panjangnya sebesar: {ΔL: .4f} meter")
+
+    elif pilihan == "2":
+        Ao = float(input("Masukkan luas awal dalam meter persegi: "))
+        β = float(input("Masukkan koefisien muai luas (/°C): "))
+        ΔT = float(input("Masukkan perubahan suhu (°C): "))
+        ΔA = hitung_pemuaian_luas(Ao, β, ΔT)
+        print(f"Perubahan luasnya sebesar: {ΔA: .4f} meter persegi")
+
+    elif pilihan == "3":
+        Vo = float(input("Masukkan volume awal dalam meter kubik: "))
+        γ = float(input("Masukkan koefisien muai volume (/°C): "))
+        ΔT = float(input("Masukkan perubahan suhu (°C): "))
+        ΔV = hitung_pemuaian_volume(Vo, γ, ΔT)
+        print(f"Perubahan volumenya sebesar: {ΔV: .4f} meter kubik")
+
+    else:
+        print(f"Pilihan tidak sesuai, silahkan pilih 1/2/3")
+
+if __name__ == "__main__":
+    main()
